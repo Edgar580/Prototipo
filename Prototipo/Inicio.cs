@@ -75,6 +75,12 @@ namespace Prototipo
                 panel_Superior.BackColor = Color.Green;
                 panel_inferior.BackColor = Color.Green;
             }
+            else if (Convert.ToInt32(comboBox1.SelectedIndex) == 0)
+            {
+                panel_login.BackColor = Color.Red;
+                panel_Superior.BackColor = Color.Red;
+                panel_inferior.BackColor = Color.Red;
+            }
         }
 
         private void label_Nombre_Aplicacion_Click(object sender, EventArgs e)
