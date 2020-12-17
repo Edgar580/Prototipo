@@ -162,6 +162,7 @@ namespace Prototipo
             this.panel_Superior.Name = "panel_Superior";
             this.panel_Superior.Size = new System.Drawing.Size(548, 27);
             this.panel_Superior.TabIndex = 6;
+            this.panel_Superior.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Superior_Paint);
             // 
             // btnCerrar
             // 

@@ -45,8 +45,9 @@ namespace Prototipo
 
         private void button_Acceder_Click(object sender, EventArgs e)
         {
-            Menu x = new Menu();
-            x.ShowDialog();
+            this.Hide();
+            Menu menu = new Menu();
+            menu.ShowDialog();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,6 +78,11 @@ namespace Prototipo
         }
 
         private void label_Nombre_Aplicacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_Superior_Paint(object sender, PaintEventArgs e)
         {
 
         }
