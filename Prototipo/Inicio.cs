@@ -42,5 +42,11 @@ namespace Prototipo
         {
             label_Olvidaste_Clave.ForeColor = Color.Blue;
         }
+
+        private void button_Acceder_Click(object sender, EventArgs e)
+        {
+            Menu x = new Menu();
+            x.ShowDialog();
+        }
     }
 }

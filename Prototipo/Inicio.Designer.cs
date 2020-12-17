@@ -32,6 +32,7 @@ namespace Prototipo
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.richTextBox_ID = new System.Windows.Forms.RichTextBox();
             this.panel_login = new System.Windows.Forms.Panel();
+            this.button_Registrar = new System.Windows.Forms.Button();
             this.label_Olvidaste_Clave = new System.Windows.Forms.Label();
             this.button_Acceder = new System.Windows.Forms.Button();
             this.label_Clave = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace Prototipo
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label_Nombre_Aplicacion = new System.Windows.Forms.Label();
-            this.button_Registrar = new System.Windows.Forms.Button();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -75,6 +75,16 @@ namespace Prototipo
             this.panel_login.Size = new System.Drawing.Size(232, 261);
             this.panel_login.TabIndex = 1;
             // 
+            // button_Registrar
+            // 
+            this.button_Registrar.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.button_Registrar.Location = new System.Drawing.Point(22, 183);
+            this.button_Registrar.Name = "button_Registrar";
+            this.button_Registrar.Size = new System.Drawing.Size(83, 33);
+            this.button_Registrar.TabIndex = 8;
+            this.button_Registrar.Text = "Registrar";
+            this.button_Registrar.UseVisualStyleBackColor = true;
+            // 
             // label_Olvidaste_Clave
             // 
             this.label_Olvidaste_Clave.AutoSize = true;
@@ -97,6 +107,7 @@ namespace Prototipo
             this.button_Acceder.TabIndex = 5;
             this.button_Acceder.Text = "Acceder";
             this.button_Acceder.UseVisualStyleBackColor = true;
+            this.button_Acceder.Click += new System.EventHandler(this.button_Acceder_Click);
             // 
             // label_Clave
             // 
@@ -181,16 +192,6 @@ namespace Prototipo
             this.label_Nombre_Aplicacion.Size = new System.Drawing.Size(228, 33);
             this.label_Nombre_Aplicacion.TabIndex = 216;
             this.label_Nombre_Aplicacion.Text = "Indice academico";
-            // 
-            // button_Registrar
-            // 
-            this.button_Registrar.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button_Registrar.Location = new System.Drawing.Point(22, 183);
-            this.button_Registrar.Name = "button_Registrar";
-            this.button_Registrar.Size = new System.Drawing.Size(83, 33);
-            this.button_Registrar.TabIndex = 8;
-            this.button_Registrar.Text = "Registrar";
-            this.button_Registrar.UseVisualStyleBackColor = true;
             // 
             // Inicio
             // 
