@@ -145,11 +145,11 @@ namespace Prototipo
             // 
             // pictureBox_Logo
             // 
-            this.pictureBox_Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.BackgroundImage")));
-            this.pictureBox_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.InitialImage")));
-            this.pictureBox_Logo.Location = new System.Drawing.Point(270, 44);
+            this.pictureBox_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.Image")));
+            this.pictureBox_Logo.InitialImage = null;
+            this.pictureBox_Logo.Location = new System.Drawing.Point(302, 60);
             this.pictureBox_Logo.Name = "pictureBox_Logo";
-            this.pictureBox_Logo.Size = new System.Drawing.Size(209, 216);
+            this.pictureBox_Logo.Size = new System.Drawing.Size(179, 188);
             this.pictureBox_Logo.TabIndex = 5;
             this.pictureBox_Logo.TabStop = false;
             this.pictureBox_Logo.Click += new System.EventHandler(this.pictureBox1_Click);
