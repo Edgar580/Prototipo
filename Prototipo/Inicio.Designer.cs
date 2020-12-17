@@ -39,13 +39,14 @@ namespace Prototipo
             this.label_ID = new System.Windows.Forms.Label();
             this.richTextBox_Clave = new System.Windows.Forms.RichTextBox();
             this.pictureBox_Logo = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_Superior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_inferior = new System.Windows.Forms.Panel();
             this.label_Nombre_Aplicacion = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel_Superior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,22 +145,23 @@ namespace Prototipo
             // 
             // pictureBox_Logo
             // 
-            this.pictureBox_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.Image")));
-            this.pictureBox_Logo.Location = new System.Drawing.Point(276, 63);
+            this.pictureBox_Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.BackgroundImage")));
+            this.pictureBox_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.InitialImage")));
+            this.pictureBox_Logo.Location = new System.Drawing.Point(270, 44);
             this.pictureBox_Logo.Name = "pictureBox_Logo";
-            this.pictureBox_Logo.Size = new System.Drawing.Size(236, 128);
+            this.pictureBox_Logo.Size = new System.Drawing.Size(209, 216);
             this.pictureBox_Logo.TabIndex = 5;
             this.pictureBox_Logo.TabStop = false;
             this.pictureBox_Logo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel1
+            // panel_Superior
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkRed;
-            this.panel1.Controls.Add(this.btnCerrar);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(548, 27);
-            this.panel1.TabIndex = 6;
+            this.panel_Superior.BackColor = System.Drawing.Color.DarkRed;
+            this.panel_Superior.Controls.Add(this.btnCerrar);
+            this.panel_Superior.Location = new System.Drawing.Point(0, -1);
+            this.panel_Superior.Name = "panel_Superior";
+            this.panel_Superior.Size = new System.Drawing.Size(548, 27);
+            this.panel_Superior.TabIndex = 6;
             // 
             // btnCerrar
             // 
@@ -174,24 +176,41 @@ namespace Prototipo
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // panel2
+            // panel_inferior
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkRed;
-            this.panel2.Location = new System.Drawing.Point(0, 299);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(643, 21);
-            this.panel2.TabIndex = 7;
+            this.panel_inferior.BackColor = System.Drawing.Color.DarkRed;
+            this.panel_inferior.Location = new System.Drawing.Point(0, 299);
+            this.panel_inferior.Name = "panel_inferior";
+            this.panel_inferior.Size = new System.Drawing.Size(643, 21);
+            this.panel_inferior.TabIndex = 7;
             // 
             // label_Nombre_Aplicacion
             // 
             this.label_Nombre_Aplicacion.AutoSize = true;
             this.label_Nombre_Aplicacion.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Nombre_Aplicacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_Nombre_Aplicacion.Location = new System.Drawing.Point(284, 209);
+            this.label_Nombre_Aplicacion.Location = new System.Drawing.Point(264, 260);
             this.label_Nombre_Aplicacion.Name = "label_Nombre_Aplicacion";
             this.label_Nombre_Aplicacion.Size = new System.Drawing.Size(228, 33);
             this.label_Nombre_Aplicacion.TabIndex = 216;
             this.label_Nombre_Aplicacion.Text = "Indice academico";
+            this.label_Nombre_Aplicacion.Click += new System.EventHandler(this.label_Nombre_Aplicacion_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.comboBox1.Location = new System.Drawing.Point(487, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(47, 21);
+            this.comboBox1.TabIndex = 217;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // Inicio
             // 
@@ -199,9 +218,10 @@ namespace Prototipo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(546, 320);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label_Nombre_Aplicacion);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_inferior);
+            this.Controls.Add(this.panel_Superior);
             this.Controls.Add(this.pictureBox_Logo);
             this.Controls.Add(this.panel_login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -214,7 +234,7 @@ namespace Prototipo
             this.panel_login.ResumeLayout(false);
             this.panel_login.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panel_Superior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,11 +251,12 @@ namespace Prototipo
         private System.Windows.Forms.Button button_Acceder;
         private System.Windows.Forms.PictureBox pictureBox_Logo;
         private System.Windows.Forms.Label label_Olvidaste_Clave;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_Superior;
+        private System.Windows.Forms.Panel panel_inferior;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label_Nombre_Aplicacion;
         private System.Windows.Forms.Button button_Registrar;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

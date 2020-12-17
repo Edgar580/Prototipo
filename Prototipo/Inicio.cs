@@ -48,5 +48,37 @@ namespace Prototipo
             Menu x = new Menu();
             x.ShowDialog();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(comboBox1.SelectedIndex) == 1)
+            {
+                panel_login.BackColor = Color.Blue;
+                panel_Superior.BackColor = Color.Blue;
+                panel_inferior.BackColor = Color.Blue;
+            }
+            else if (Convert.ToInt32(comboBox1.SelectedIndex) == 2)
+            {
+                panel_login.BackColor = Color.Black;
+                panel_Superior.BackColor = Color.Black;
+                panel_inferior.BackColor = Color.Black;
+            }
+            else if (Convert.ToInt32(comboBox1.SelectedIndex) == 3)
+            {
+                panel_login.BackColor = Color.Green;
+                panel_Superior.BackColor = Color.Green;
+                panel_inferior.BackColor = Color.Green;
+            }
+        }
+
+        private void label_Nombre_Aplicacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
