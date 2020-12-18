@@ -12,6 +12,17 @@ namespace Prototipo
 {
     public partial class Estudiante : Form
     {
+        private readonly static Estudiante _instance = new Estudiante();
+
+
+
+        public static Estudiante Instance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
         public Estudiante()
         {
             InitializeComponent();
