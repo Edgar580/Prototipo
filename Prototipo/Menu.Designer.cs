@@ -184,6 +184,8 @@
             this.panel_profesores.Name = "panel_profesores";
             this.panel_profesores.Size = new System.Drawing.Size(211, 53);
             this.panel_profesores.TabIndex = 2;
+            this.panel_profesores.Click += new System.EventHandler(this.panel_profesores_Click);
+            this.panel_profesores.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_profesores_Paint);
             // 
             // pictureBox3
             // 

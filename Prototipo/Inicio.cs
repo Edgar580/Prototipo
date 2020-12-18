@@ -100,7 +100,7 @@ namespace Prototipo
                 menu.panel_salir.BackColor = Color.Green;
                 menu.panel_menu.BackColor = Color.White;
             }
-            menu.pictureBox_Logo.Location = new Point(200, 310);
+         
             menu.ShowDialog();
         }
 

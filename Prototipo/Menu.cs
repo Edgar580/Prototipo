@@ -144,5 +144,15 @@ namespace Prototipo
                 MessageBox.Show("No existe pestaña para eliminar");
             }
         }
+
+        private void panel_profesores_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel_profesores_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(Profesor.Instance, "Profesor");
+        }
     }
 }

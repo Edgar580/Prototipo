@@ -12,6 +12,17 @@ namespace Prototipo
 {
     public partial class Profesor : Form
     {
+        private readonly static Profesor _instance = new Profesor();
+
+
+
+        public static Profesor Instance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
         public Profesor()
         {
             InitializeComponent();
@@ -23,6 +34,11 @@ namespace Prototipo
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Profesor_Load(object sender, EventArgs e)
         {
 
         }
