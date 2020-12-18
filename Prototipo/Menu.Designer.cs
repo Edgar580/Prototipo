@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel_menu = new System.Windows.Forms.Panel();
             this.panel_calificaiones = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label_calificaiones = new System.Windows.Forms.Label();
             this.panel_estudiantes = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,27 +39,27 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label_inicio = new System.Windows.Forms.Label();
             this.panel_profesores = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label_profesores = new System.Windows.Forms.Label();
             this.panel_asignaturas = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label_asignaturas = new System.Windows.Forms.Label();
             this.panel_salir = new System.Windows.Forms.Panel();
-            this.label_salir = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label_salir = new System.Windows.Forms.Label();
+            this.tab = new System.Windows.Forms.TabControl();
             this.panel_menu.SuspendLayout();
             this.panel_calificaiones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel_estudiantes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_inicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_profesores.SuspendLayout();
-            this.panel_asignaturas.SuspendLayout();
-            this.panel_salir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel_asignaturas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel_salir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,7 @@
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(211, 449);
             this.panel_menu.TabIndex = 0;
+            this.panel_menu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_menu_Paint);
             // 
             // panel_calificaiones
             // 
@@ -83,6 +84,16 @@
             this.panel_calificaiones.Name = "panel_calificaiones";
             this.panel_calificaiones.Size = new System.Drawing.Size(211, 53);
             this.panel_calificaiones.TabIndex = 3;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
+            this.pictureBox5.Location = new System.Drawing.Point(11, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
             // 
             // label_calificaiones
             // 
@@ -104,6 +115,7 @@
             this.panel_estudiantes.Name = "panel_estudiantes";
             this.panel_estudiantes.Size = new System.Drawing.Size(211, 53);
             this.panel_estudiantes.TabIndex = 1;
+            this.panel_estudiantes.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_estudiantes_Paint);
             // 
             // pictureBox1
             // 
@@ -125,6 +137,7 @@
             this.label_estudiantes.Size = new System.Drawing.Size(125, 29);
             this.label_estudiantes.TabIndex = 4;
             this.label_estudiantes.Text = "Estudiantes";
+            this.label_estudiantes.Click += new System.EventHandler(this.label_estudiantes_Click);
             // 
             // panel_inicio
             // 
@@ -135,10 +148,10 @@
             this.panel_inicio.Name = "panel_inicio";
             this.panel_inicio.Size = new System.Drawing.Size(211, 53);
             this.panel_inicio.TabIndex = 0;
+            this.panel_inicio.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_inicio_Paint);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
             this.pictureBox2.Location = new System.Drawing.Point(11, 9);
             this.pictureBox2.Name = "pictureBox2";
@@ -168,6 +181,16 @@
             this.panel_profesores.Size = new System.Drawing.Size(211, 53);
             this.panel_profesores.TabIndex = 2;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
+            this.pictureBox3.Location = new System.Drawing.Point(11, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // label_profesores
             // 
             this.label_profesores.AutoSize = true;
@@ -189,6 +212,16 @@
             this.panel_asignaturas.Size = new System.Drawing.Size(211, 53);
             this.panel_asignaturas.TabIndex = 3;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
+            this.pictureBox4.Location = new System.Drawing.Point(11, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
             // label_asignaturas
             // 
             this.label_asignaturas.AutoSize = true;
@@ -209,6 +242,18 @@
             this.panel_salir.Name = "panel_salir";
             this.panel_salir.Size = new System.Drawing.Size(211, 53);
             this.panel_salir.TabIndex = 3;
+            this.panel_salir.Click += new System.EventHandler(this.panel_salir_Click);
+            this.panel_salir.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_salir_Paint);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
+            this.pictureBox6.Location = new System.Drawing.Point(11, 9);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
             // 
             // label_salir
             // 
@@ -221,66 +266,33 @@
             this.label_salir.TabIndex = 6;
             this.label_salir.Text = "Salir";
             // 
-            // pictureBox3
+            // tab
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
-            this.pictureBox3.Location = new System.Drawing.Point(11, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
-            this.pictureBox4.Location = new System.Drawing.Point(11, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
-            this.pictureBox5.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
-            this.pictureBox6.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
+            this.tab.Location = new System.Drawing.Point(218, 0);
+            this.tab.Name = "tab";
+            this.tab.SelectedIndex = 0;
+            this.tab.Size = new System.Drawing.Size(583, 433);
+            this.tab.TabIndex = 4;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 430);
+            this.ClientSize = new System.Drawing.Size(800, 437);
+            this.Controls.Add(this.tab);
             this.Controls.Add(this.panel_salir);
             this.Controls.Add(this.panel_asignaturas);
             this.Controls.Add(this.panel_profesores);
             this.Controls.Add(this.panel_menu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel_menu.ResumeLayout(false);
             this.panel_calificaiones.ResumeLayout(false);
             this.panel_calificaiones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel_estudiantes.ResumeLayout(false);
             this.panel_estudiantes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -289,27 +301,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_profesores.ResumeLayout(false);
             this.panel_profesores.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel_asignaturas.ResumeLayout(false);
             this.panel_asignaturas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel_salir.ResumeLayout(false);
             this.panel_salir.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel_menu;
-        private System.Windows.Forms.Panel panel_calificaiones;
-        private System.Windows.Forms.Panel panel_estudiantes;
-        private System.Windows.Forms.Panel panel_inicio;
-        private System.Windows.Forms.Panel panel_profesores;
-        private System.Windows.Forms.Panel panel_asignaturas;
-        private System.Windows.Forms.Panel panel_salir;
         private System.Windows.Forms.Label label_calificaiones;
         private System.Windows.Forms.Label label_estudiantes;
         private System.Windows.Forms.Label label_inicio;
@@ -322,5 +325,13 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TabControl tab;
+        public System.Windows.Forms.Panel panel_menu;
+        public System.Windows.Forms.Panel panel_estudiantes;
+        public System.Windows.Forms.Panel panel_inicio;
+        public System.Windows.Forms.Panel panel_profesores;
+        public System.Windows.Forms.Panel panel_asignaturas;
+        public System.Windows.Forms.Panel panel_calificaiones;
+        public System.Windows.Forms.Panel panel_salir;
     }
 }

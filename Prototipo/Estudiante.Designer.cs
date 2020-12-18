@@ -49,7 +49,7 @@ namespace Prototipo
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(203, 145);
+            this.textBox1.Location = new System.Drawing.Point(21, 145);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace Prototipo
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(198, 113);
+            this.label1.Location = new System.Drawing.Point(16, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 29);
             this.label1.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace Prototipo
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(345, 113);
+            this.label2.Location = new System.Drawing.Point(163, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 29);
             this.label2.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace Prototipo
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(350, 145);
+            this.textBox2.Location = new System.Drawing.Point(168, 145);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace Prototipo
             // 
             this.Carrera.AutoSize = true;
             this.Carrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Carrera.Location = new System.Drawing.Point(505, 113);
+            this.Carrera.Location = new System.Drawing.Point(323, 113);
             this.Carrera.Name = "Carrera";
             this.Carrera.Size = new System.Drawing.Size(94, 29);
             this.Carrera.TabIndex = 4;
@@ -94,14 +94,14 @@ namespace Prototipo
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(510, 145);
+            this.textBox3.Location = new System.Drawing.Point(328, 145);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(203, 199);
+            this.button1.Location = new System.Drawing.Point(21, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 23);
             this.button1.TabIndex = 6;
@@ -112,14 +112,14 @@ namespace Prototipo
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(203, 243);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 210);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(407, 185);
             this.dataGridView1.TabIndex = 7;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(350, 198);
+            this.button2.Location = new System.Drawing.Point(168, 181);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 23);
             this.button2.TabIndex = 8;
@@ -129,7 +129,7 @@ namespace Prototipo
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(486, 198);
+            this.button3.Location = new System.Drawing.Point(304, 181);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 23);
             this.button3.TabIndex = 9;
@@ -161,7 +161,7 @@ namespace Prototipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(458, 425);
             this.Controls.Add(this.Estudiantes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -174,6 +174,7 @@ namespace Prototipo
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Estudiante";
             this.Text = "Estudiantes";
             this.Load += new System.EventHandler(this.Estudiante_Load);
