@@ -154,5 +154,15 @@ namespace Prototipo
         {
             AbrirFormEnPanel(Profesor.Instance, "Profesor");
         }
+
+        private void panel_calificaiones_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(Calificaciones.Instance, "Calificaciones");
+        }
+
+        private void label_calificaiones_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(Calificaciones.Instance, "Calificaciones");
+        }
     }
 }

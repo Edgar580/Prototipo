@@ -85,6 +85,7 @@
             this.panel_calificaiones.Name = "panel_calificaiones";
             this.panel_calificaiones.Size = new System.Drawing.Size(211, 53);
             this.panel_calificaiones.TabIndex = 3;
+            this.panel_calificaiones.Click += new System.EventHandler(this.panel_calificaiones_Click);
             // 
             // pictureBox5
             // 
@@ -106,6 +107,7 @@
             this.label_calificaiones.Size = new System.Drawing.Size(144, 29);
             this.label_calificaiones.TabIndex = 6;
             this.label_calificaiones.Text = "Calificaciones";
+            this.label_calificaiones.Click += new System.EventHandler(this.label_calificaiones_Click);
             // 
             // panel_estudiantes
             // 

@@ -84,6 +84,7 @@ namespace Prototipo
             this.button_Registrar.TabIndex = 8;
             this.button_Registrar.Text = "Registrar";
             this.button_Registrar.UseVisualStyleBackColor = true;
+            this.button_Registrar.Click += new System.EventHandler(this.button_Registrar_Click);
             // 
             // label_Olvidaste_Clave
             // 

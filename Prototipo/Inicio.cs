@@ -159,5 +159,11 @@ namespace Prototipo
         {
             label_Olvidaste_Clave.ForeColor = Color.Black;
         }
+
+        private void button_Registrar_Click(object sender, EventArgs e)
+        {
+            Usuarios x = Usuarios.Instance;
+            x.ShowDialog();
+        }
     }
 }
