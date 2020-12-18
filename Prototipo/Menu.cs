@@ -130,19 +130,21 @@ namespace Prototipo
 
         private void label_inicio_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
 
-                tab.SelectedTab.Controls.Clear();
-                tab.TabPages.Remove(tab.SelectedTab);
+            //    tab.SelectedTab.Controls.Clear();
+            //    tab.TabPages.Remove(tab.SelectedTab);
 
 
-           }
-            catch (Exception)
-            {
+            //}
+            //catch (Exception)
+            //{
 
-                MessageBox.Show("No existe pestaña para eliminar");
-            }
+            //    MessageBox.Show("No existe pestaña para eliminar");
+            //}
+
+
         }
 
         private void panel_profesores_Paint(object sender, PaintEventArgs e)
