@@ -115,6 +115,7 @@
             this.panel_estudiantes.Name = "panel_estudiantes";
             this.panel_estudiantes.Size = new System.Drawing.Size(211, 53);
             this.panel_estudiantes.TabIndex = 1;
+            this.panel_estudiantes.Click += new System.EventHandler(this.panel_estudiantes_Click);
             this.panel_estudiantes.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_estudiantes_Paint);
             // 
             // pictureBox1
@@ -211,6 +212,7 @@
             this.panel_asignaturas.Name = "panel_asignaturas";
             this.panel_asignaturas.Size = new System.Drawing.Size(211, 53);
             this.panel_asignaturas.TabIndex = 3;
+            this.panel_asignaturas.Click += new System.EventHandler(this.panel_asignaturas_Click);
             // 
             // pictureBox4
             // 
@@ -232,6 +234,7 @@
             this.label_asignaturas.Size = new System.Drawing.Size(127, 29);
             this.label_asignaturas.TabIndex = 6;
             this.label_asignaturas.Text = "Asignaturas";
+            this.label_asignaturas.Click += new System.EventHandler(this.label_asignaturas_Click);
             // 
             // panel_salir
             // 

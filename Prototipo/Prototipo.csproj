@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Asignaturas.resx">
+      <DependentUpon>Asignaturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estudiante.resx">
       <DependentUpon>Estudiante.cs</DependentUpon>
     </EmbeddedResource>

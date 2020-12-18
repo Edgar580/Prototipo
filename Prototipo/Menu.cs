@@ -94,5 +94,20 @@ namespace Prototipo
         {
 
         }
+
+        private void panel_asignaturas_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(Asignaturas.Instance, "Asignaturas");
+        }
+
+        private void label_asignaturas_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(Asignaturas.Instance, "Asignaturas");
+        }
+
+        private void panel_estudiantes_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(Estudiante.Instance, "Estudiante");
+        }
     }
 }
