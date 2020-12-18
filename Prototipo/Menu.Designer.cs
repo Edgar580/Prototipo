@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel_menu = new System.Windows.Forms.Panel();
             this.panel_calificaiones = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -149,6 +150,7 @@
             this.panel_inicio.Name = "panel_inicio";
             this.panel_inicio.Size = new System.Drawing.Size(211, 53);
             this.panel_inicio.TabIndex = 0;
+            this.panel_inicio.Click += new System.EventHandler(this.panel_inicio_Click);
             this.panel_inicio.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_inicio_Paint);
             // 
             // pictureBox2
@@ -171,6 +173,7 @@
             this.label_inicio.Size = new System.Drawing.Size(63, 29);
             this.label_inicio.TabIndex = 0;
             this.label_inicio.Text = "Inicio";
+            this.label_inicio.Click += new System.EventHandler(this.label_inicio_Click);
             // 
             // panel_profesores
             // 
@@ -289,6 +292,7 @@
             this.Controls.Add(this.panel_profesores);
             this.Controls.Add(this.panel_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);

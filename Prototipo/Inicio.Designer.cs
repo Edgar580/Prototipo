@@ -97,6 +97,8 @@ namespace Prototipo
             this.label_Olvidaste_Clave.Text = "¿Olvidaste tu clave?";
             this.label_Olvidaste_Clave.CursorChanged += new System.EventHandler(this.label_Olvidaste_Clave_CursorChanged);
             this.label_Olvidaste_Clave.Click += new System.EventHandler(this.label3_Click);
+            this.label_Olvidaste_Clave.MouseHover += new System.EventHandler(this.label_Olvidaste_Clave_MouseHover);
+            this.label_Olvidaste_Clave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_Olvidaste_Clave_MouseMove);
             // 
             // button_Acceder
             // 

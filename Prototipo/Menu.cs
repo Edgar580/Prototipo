@@ -87,7 +87,7 @@ namespace Prototipo
 
         private void panel_inicio_Paint(object sender, PaintEventArgs e)
         {
-
+           
         }
 
         private void panel_estudiantes_Paint(object sender, PaintEventArgs e)
@@ -108,6 +108,41 @@ namespace Prototipo
         private void panel_estudiantes_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(Estudiante.Instance, "Estudiante");
+        }
+
+        private void panel_inicio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                tab.SelectedTab.Controls.Clear();
+                tab.TabPages.Remove(tab.SelectedTab);
+
+
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No existe pestaña para eliminar");
+            }
+        }
+
+        private void label_inicio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                tab.SelectedTab.Controls.Clear();
+                tab.TabPages.Remove(tab.SelectedTab);
+
+
+           }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No existe pestaña para eliminar");
+            }
         }
     }
 }

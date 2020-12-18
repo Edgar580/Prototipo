@@ -100,7 +100,7 @@ namespace Prototipo
                 menu.panel_salir.BackColor = Color.Green;
                 menu.panel_menu.BackColor = Color.White;
             }
-
+            menu.pictureBox_Logo.Location = new Point(200, 310);
             menu.ShowDialog();
         }
 
@@ -145,6 +145,19 @@ namespace Prototipo
         private void panel_Superior_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label_Olvidaste_Clave_MouseHover(object sender, EventArgs e)
+        {
+           
+               
+            
+
+        }
+
+        private void label_Olvidaste_Clave_MouseMove(object sender, MouseEventArgs e)
+        {
+            label_Olvidaste_Clave.ForeColor = Color.Black;
         }
     }
 }
