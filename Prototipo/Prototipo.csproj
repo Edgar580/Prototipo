@@ -64,6 +64,12 @@
     <Compile Include="Asignaturas.Designer.cs">
       <DependentUpon>Asignaturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Indice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indice.Designer.cs">
+      <DependentUpon>Indice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estudiante.resx">
       <DependentUpon>Estudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Indice.resx">
+      <DependentUpon>Indice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
