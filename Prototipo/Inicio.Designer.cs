@@ -42,7 +42,6 @@ namespace Prototipo
             this.panel_Superior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel_inferior = new System.Windows.Forms.Panel();
-            this.label_Nombre_Aplicacion = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
@@ -64,7 +63,7 @@ namespace Prototipo
             // 
             // panel_login
             // 
-            this.panel_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(8)))), ((int)(((byte)(18)))));
+            this.panel_login.BackColor = System.Drawing.Color.Gray;
             this.panel_login.Controls.Add(this.button_Registrar);
             this.panel_login.Controls.Add(this.label_Olvidaste_Clave);
             this.panel_login.Controls.Add(this.button_Acceder);
@@ -86,6 +85,7 @@ namespace Prototipo
             this.button_Registrar.TabIndex = 8;
             this.button_Registrar.Text = "Registrar";
             this.button_Registrar.UseVisualStyleBackColor = true;
+            this.button_Registrar.Click += new System.EventHandler(this.button_Registrar_Click);
             // 
             // label_Olvidaste_Clave
             // 
@@ -99,6 +99,8 @@ namespace Prototipo
             this.label_Olvidaste_Clave.Text = "¿Olvidaste tu clave?";
             this.label_Olvidaste_Clave.CursorChanged += new System.EventHandler(this.label_Olvidaste_Clave_CursorChanged);
             this.label_Olvidaste_Clave.Click += new System.EventHandler(this.label3_Click);
+            this.label_Olvidaste_Clave.MouseHover += new System.EventHandler(this.label_Olvidaste_Clave_MouseHover);
+            this.label_Olvidaste_Clave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_Olvidaste_Clave_MouseMove);
             // 
             // button_Acceder
             // 
@@ -157,7 +159,7 @@ namespace Prototipo
             // 
             // panel_Superior
             // 
-            this.panel_Superior.BackColor = System.Drawing.Color.DarkRed;
+            this.panel_Superior.BackColor = System.Drawing.Color.Gray;
             this.panel_Superior.Controls.Add(this.btnCerrar);
             this.panel_Superior.Location = new System.Drawing.Point(0, -1);
             this.panel_Superior.Name = "panel_Superior";
@@ -180,26 +182,15 @@ namespace Prototipo
             // 
             // panel_inferior
             // 
-            this.panel_inferior.BackColor = System.Drawing.Color.DarkRed;
+            this.panel_inferior.BackColor = System.Drawing.Color.Gray;
             this.panel_inferior.Location = new System.Drawing.Point(0, 299);
             this.panel_inferior.Name = "panel_inferior";
             this.panel_inferior.Size = new System.Drawing.Size(643, 21);
             this.panel_inferior.TabIndex = 7;
             // 
-            // label_Nombre_Aplicacion
-            // 
-            this.label_Nombre_Aplicacion.AutoSize = true;
-            this.label_Nombre_Aplicacion.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Nombre_Aplicacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_Nombre_Aplicacion.Location = new System.Drawing.Point(264, 260);
-            this.label_Nombre_Aplicacion.Name = "label_Nombre_Aplicacion";
-            this.label_Nombre_Aplicacion.Size = new System.Drawing.Size(228, 33);
-            this.label_Nombre_Aplicacion.TabIndex = 216;
-            this.label_Nombre_Aplicacion.Text = "Indice academico";
-            this.label_Nombre_Aplicacion.Click += new System.EventHandler(this.label_Nombre_Aplicacion_Click);
-            // 
             // comboBox1
             // 
+            this.comboBox1.CausesValidation = false;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -221,7 +212,6 @@ namespace Prototipo
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(546, 320);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label_Nombre_Aplicacion);
             this.Controls.Add(this.panel_inferior);
             this.Controls.Add(this.panel_Superior);
             this.Controls.Add(this.pictureBox_Logo);
@@ -239,7 +229,6 @@ namespace Prototipo
             this.panel_Superior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -256,7 +245,6 @@ namespace Prototipo
         private System.Windows.Forms.Panel panel_Superior;
         private System.Windows.Forms.Panel panel_inferior;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Label label_Nombre_Aplicacion;
         private System.Windows.Forms.Button button_Registrar;
         private System.Windows.Forms.ComboBox comboBox1;
     }
