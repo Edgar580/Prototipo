@@ -86,5 +86,10 @@ namespace Prototipo
         {
 
         }
+
+        private void richTextBox_ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

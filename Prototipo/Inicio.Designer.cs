@@ -60,6 +60,7 @@ namespace Prototipo
             this.richTextBox_ID.Size = new System.Drawing.Size(157, 23);
             this.richTextBox_ID.TabIndex = 1;
             this.richTextBox_ID.Text = "";
+            this.richTextBox_ID.TextChanged += new System.EventHandler(this.richTextBox_ID_TextChanged);
             // 
             // panel_login
             // 
