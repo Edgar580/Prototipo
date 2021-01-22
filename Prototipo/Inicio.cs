@@ -12,6 +12,7 @@ namespace Prototipo
 {
     public partial class Inicio : Form
     {
+        DataSet1TableAdapters.UsuariosTableAdapter DB;
         private readonly static Inicio _instance = new Inicio();
 
 
@@ -26,6 +27,7 @@ namespace Prototipo
         public Inicio()
         {
             InitializeComponent();
+            DB = new DataSet1TableAdapters.UsuariosTableAdapter();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -56,6 +58,19 @@ namespace Prototipo
 
         private void button_Acceder_Click(object sender, EventArgs e)
         {
+             if (DB.ValidarClave(richTextBox_ID.Text) != richTextBox_Clave.Text)
+            {
+                MessageBox.Show("incorrecta");
+            }
+            else if (DB.ValidarUsuario(richTextBox_ID.Text, richTextBox_Clave.Text) == null )
+            {
+                MessageBox.Show("Usuario no existe");
+            }
+         
+            else
+            {
+
+            
             this.Hide();
             Menu menu = new Menu();
             if (Convert.ToInt32(comboBox1.SelectedIndex) == 0)
@@ -67,7 +82,7 @@ namespace Prototipo
                 menu.panel_calificaiones.BackColor = Color.Red;
                 menu.panel_salir.BackColor = Color.Red;
                 menu.panel_menu.BackColor = Color.White;
-                
+
 
 
             }
@@ -100,8 +115,43 @@ namespace Prototipo
                 menu.panel_salir.BackColor = Color.Green;
                 menu.panel_menu.BackColor = Color.White;
             }
-         
-            menu.ShowDialog();
+            try
+            {
+                int Rol;
+                Rol = Convert.ToInt32(DB.GetRol(richTextBox_ID.Text, richTextBox_Clave.Text));
+                if (Rol == 3)
+                {
+        
+                    menu.panel1.Visible = true;
+                    menu.panel_estudiantes.Visible = true;
+                    menu.panel_profesores.Visible = true;
+                    menu.panel_asignaturas.Visible = true;
+                    menu.Rol = 3;
+
+                }
+                else if (Rol == 2)
+                {
+                    menu.Rol = 2;
+                }
+                else if (Rol == 1)
+                {
+                    menu.Rol = 1;
+                }
+                menu.ShowDialog();
+           
+            }
+            catch (Exception EX)
+            {
+
+                MessageBox.Show(EX.Message);
+            }
+            }
+
+
+
+
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -162,8 +212,7 @@ namespace Prototipo
 
         private void button_Registrar_Click(object sender, EventArgs e)
         {
-            Usuarios x = Usuarios.Instance;
-            x.ShowDialog();
+          
         }
 
         private void richTextBox_ID_TextChanged(object sender, EventArgs e)

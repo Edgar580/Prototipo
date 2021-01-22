@@ -32,17 +32,16 @@ namespace Prototipo
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.richTextBox_ID = new System.Windows.Forms.RichTextBox();
             this.panel_login = new System.Windows.Forms.Panel();
-            this.button_Registrar = new System.Windows.Forms.Button();
             this.label_Olvidaste_Clave = new System.Windows.Forms.Label();
             this.button_Acceder = new System.Windows.Forms.Button();
             this.label_Clave = new System.Windows.Forms.Label();
             this.label_ID = new System.Windows.Forms.Label();
-            this.richTextBox_Clave = new System.Windows.Forms.RichTextBox();
             this.pictureBox_Logo = new System.Windows.Forms.PictureBox();
             this.panel_Superior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel_inferior = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.richTextBox_Clave = new System.Windows.Forms.TextBox();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
             this.panel_Superior.SuspendLayout();
@@ -64,28 +63,16 @@ namespace Prototipo
             // panel_login
             // 
             this.panel_login.BackColor = System.Drawing.Color.Gray;
-            this.panel_login.Controls.Add(this.button_Registrar);
+            this.panel_login.Controls.Add(this.richTextBox_Clave);
             this.panel_login.Controls.Add(this.label_Olvidaste_Clave);
             this.panel_login.Controls.Add(this.button_Acceder);
             this.panel_login.Controls.Add(this.label_Clave);
             this.panel_login.Controls.Add(this.label_ID);
-            this.panel_login.Controls.Add(this.richTextBox_Clave);
             this.panel_login.Controls.Add(this.richTextBox_ID);
             this.panel_login.Location = new System.Drawing.Point(12, 32);
             this.panel_login.Name = "panel_login";
             this.panel_login.Size = new System.Drawing.Size(232, 261);
             this.panel_login.TabIndex = 1;
-            // 
-            // button_Registrar
-            // 
-            this.button_Registrar.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button_Registrar.Location = new System.Drawing.Point(22, 183);
-            this.button_Registrar.Name = "button_Registrar";
-            this.button_Registrar.Size = new System.Drawing.Size(83, 33);
-            this.button_Registrar.TabIndex = 8;
-            this.button_Registrar.Text = "Registrar";
-            this.button_Registrar.UseVisualStyleBackColor = true;
-            this.button_Registrar.Click += new System.EventHandler(this.button_Registrar_Click);
             // 
             // label_Olvidaste_Clave
             // 
@@ -105,7 +92,7 @@ namespace Prototipo
             // button_Acceder
             // 
             this.button_Acceder.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button_Acceder.Location = new System.Drawing.Point(126, 183);
+            this.button_Acceder.Location = new System.Drawing.Point(71, 183);
             this.button_Acceder.Name = "button_Acceder";
             this.button_Acceder.Size = new System.Drawing.Size(83, 33);
             this.button_Acceder.TabIndex = 5;
@@ -134,17 +121,6 @@ namespace Prototipo
             this.label_ID.Size = new System.Drawing.Size(58, 18);
             this.label_ID.TabIndex = 2;
             this.label_ID.Text = "Usuario";
-            // 
-            // richTextBox_Clave
-            // 
-            this.richTextBox_Clave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_Clave.Location = new System.Drawing.Point(37, 116);
-            this.richTextBox_Clave.MaxLength = 7;
-            this.richTextBox_Clave.Multiline = false;
-            this.richTextBox_Clave.Name = "richTextBox_Clave";
-            this.richTextBox_Clave.Size = new System.Drawing.Size(157, 23);
-            this.richTextBox_Clave.TabIndex = 2;
-            this.richTextBox_Clave.Text = "";
             // 
             // pictureBox_Logo
             // 
@@ -205,6 +181,14 @@ namespace Prototipo
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
+            // richTextBox_Clave
+            // 
+            this.richTextBox_Clave.Location = new System.Drawing.Point(37, 116);
+            this.richTextBox_Clave.Name = "richTextBox_Clave";
+            this.richTextBox_Clave.PasswordChar = '*';
+            this.richTextBox_Clave.Size = new System.Drawing.Size(157, 20);
+            this.richTextBox_Clave.TabIndex = 218;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,15 +222,14 @@ namespace Prototipo
         private System.Windows.Forms.Panel panel_login;
         private System.Windows.Forms.Label label_Clave;
         private System.Windows.Forms.Label label_ID;
-        private System.Windows.Forms.RichTextBox richTextBox_Clave;
         private System.Windows.Forms.Button button_Acceder;
         private System.Windows.Forms.PictureBox pictureBox_Logo;
         private System.Windows.Forms.Label label_Olvidaste_Clave;
         private System.Windows.Forms.Panel panel_Superior;
         private System.Windows.Forms.Panel panel_inferior;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Button button_Registrar;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox richTextBox_Clave;
     }
 }
 

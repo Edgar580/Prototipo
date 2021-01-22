@@ -51,6 +51,9 @@
             this.tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_menu.SuspendLayout();
             this.panel_calificaiones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -67,11 +70,14 @@
             this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_menu
             // 
             this.panel_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel_menu.Controls.Add(this.panel1);
             this.panel_menu.Controls.Add(this.panel_calificaiones);
             this.panel_menu.Controls.Add(this.panel_estudiantes);
             this.panel_menu.Controls.Add(this.panel_inicio);
@@ -91,6 +97,7 @@
             this.panel_calificaiones.Size = new System.Drawing.Size(211, 53);
             this.panel_calificaiones.TabIndex = 3;
             this.panel_calificaiones.Click += new System.EventHandler(this.panel_calificaiones_Click);
+            this.panel_calificaiones.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_calificaiones_Paint);
             // 
             // pictureBox5
             // 
@@ -123,6 +130,7 @@
             this.panel_estudiantes.Name = "panel_estudiantes";
             this.panel_estudiantes.Size = new System.Drawing.Size(211, 53);
             this.panel_estudiantes.TabIndex = 1;
+            this.panel_estudiantes.Visible = false;
             this.panel_estudiantes.Click += new System.EventHandler(this.panel_estudiantes_Click);
             this.panel_estudiantes.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_estudiantes_Paint);
             // 
@@ -191,6 +199,7 @@
             this.panel_profesores.Name = "panel_profesores";
             this.panel_profesores.Size = new System.Drawing.Size(211, 53);
             this.panel_profesores.TabIndex = 2;
+            this.panel_profesores.Visible = false;
             this.panel_profesores.Click += new System.EventHandler(this.panel_profesores_Click);
             this.panel_profesores.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_profesores_Paint);
             // 
@@ -224,6 +233,7 @@
             this.panel_asignaturas.Name = "panel_asignaturas";
             this.panel_asignaturas.Size = new System.Drawing.Size(211, 53);
             this.panel_asignaturas.TabIndex = 3;
+            this.panel_asignaturas.Visible = false;
             this.panel_asignaturas.Click += new System.EventHandler(this.panel_asignaturas_Click);
             // 
             // pictureBox4
@@ -311,12 +321,46 @@
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.pictureBox8);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 295);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(211, 53);
+            this.panel1.TabIndex = 9;
+            this.panel1.Visible = false;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.ImageLocation = "C:\\Users\\Alan\\Desktop\\iconos\\estudiante.png";
+            this.pictureBox8.Location = new System.Drawing.Point(11, 9);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(49, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Usuario";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 437);
+            this.ClientSize = new System.Drawing.Size(820, 451);
             this.Controls.Add(this.tab);
             this.Controls.Add(this.panel_salir);
             this.Controls.Add(this.panel_asignaturas);
@@ -349,6 +393,9 @@
             this.tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +423,8 @@
         public System.Windows.Forms.Panel panel_salir;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox7;
+        public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label1;
     }
 }

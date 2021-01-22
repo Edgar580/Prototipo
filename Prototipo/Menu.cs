@@ -12,6 +12,10 @@ namespace Prototipo
 {
     public partial class Menu : Form
     {
+        DataSet1TableAdapters.CalificacionTableAdapter DB;
+        public bool Cambios;
+        public bool admin;
+        public int Rol;
         private readonly static Menu _instance = new Menu();
 
 
@@ -26,6 +30,7 @@ namespace Prototipo
         public Menu()
         {
             InitializeComponent();
+            DB = new DataSet1TableAdapters.CalificacionTableAdapter();
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -159,12 +164,60 @@ namespace Prototipo
 
         private void panel_calificaiones_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(Calificaciones.Instance, "Calificaciones");
+            if (Rol == 1) // Estudiante
+            {
+                AbrirFormEnPanel(Indice.Instance, "Indice");
+
+            }
+
+
+            else if (Rol == 2) // Profesor
+            {
+                AbrirFormEnPanel(Calificaciones.Instance, "Calificaciones");
+            }
+            else if (Rol == 3) // Administrador
+            {
+                AbrirFormEnPanel(Reporte_de_calificaciones.Instance, "Reporte");
+
+            }
+
         }
 
         private void label_calificaiones_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(Calificaciones.Instance, "Calificaciones");
+            if (Rol == 1) // Estudiante
+            {
+                AbrirFormEnPanel(Indice.Instance, "Indice");
+             
+            }
+           
+
+            else if (Rol == 2) // Profesor
+            {
+                AbrirFormEnPanel(Calificaciones.Instance, "Calificaciones");
+            }
+           else if (Rol == 3) // Administrador
+            {
+                AbrirFormEnPanel(Reporte_de_calificaciones.Instance, "Reporte");
+
+            }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            Usuarios x = Usuarios.Instance;
+            x.ShowDialog();
+        }
+
+        private void panel_calificaiones_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

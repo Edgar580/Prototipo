@@ -29,12 +29,13 @@ namespace Prototipo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.Estudiantes = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TextBoxNombre = new System.Windows.Forms.TextBox();
+            this.TextBoxClave = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -43,10 +44,15 @@ namespace Prototipo
             this.panel_Superior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ComboBoxRol = new System.Windows.Forms.ComboBox();
+            this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Prototipo.DataSet1();
+            this.rolTableAdapter = new Prototipo.DataSet1TableAdapters.RolTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_Superior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // Estudiantes
@@ -79,20 +85,20 @@ namespace Prototipo
             this.label2.TabIndex = 14;
             this.label2.Text = "Clave";
             // 
-            // textBox1
+            // TextBoxNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(223, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 15;
+            this.TextBoxNombre.Location = new System.Drawing.Point(223, 111);
+            this.TextBoxNombre.Name = "TextBoxNombre";
+            this.TextBoxNombre.Size = new System.Drawing.Size(153, 20);
+            this.TextBoxNombre.TabIndex = 15;
             // 
-            // textBox2
+            // TextBoxClave
             // 
-            this.textBox2.Location = new System.Drawing.Point(68, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 16;
+            this.TextBoxClave.Location = new System.Drawing.Point(68, 149);
+            this.TextBoxClave.Name = "TextBoxClave";
+            this.TextBoxClave.PasswordChar = '*';
+            this.TextBoxClave.Size = new System.Drawing.Size(153, 20);
+            this.TextBoxClave.TabIndex = 16;
             // 
             // button1
             // 
@@ -103,6 +109,7 @@ namespace Prototipo
             this.button1.TabIndex = 17;
             this.button1.Text = "Crear";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -113,6 +120,7 @@ namespace Prototipo
             this.button2.TabIndex = 18;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -123,6 +131,7 @@ namespace Prototipo
             this.button3.TabIndex = 19;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -141,6 +150,7 @@ namespace Prototipo
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(438, 144);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel_Superior
             // 
@@ -174,21 +184,38 @@ namespace Prototipo
             this.label3.TabIndex = 23;
             this.label3.Text = "Rol";
             // 
-            // comboBox1
+            // ComboBoxRol
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(52, 179);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 24;
+            this.ComboBoxRol.DataSource = this.rolBindingSource;
+            this.ComboBoxRol.DisplayMember = "Descripcion";
+            this.ComboBoxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxRol.FormattingEnabled = true;
+            this.ComboBoxRol.Location = new System.Drawing.Point(52, 179);
+            this.ComboBoxRol.Name = "ComboBoxRol";
+            this.ComboBoxRol.Size = new System.Drawing.Size(121, 21);
+            this.ComboBoxRol.TabIndex = 24;
+            this.ComboBoxRol.ValueMember = "Id";
+            // 
+            // rolBindingSource
+            // 
+            this.rolBindingSource.DataMember = "Rol";
+            this.rolBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rolTableAdapter
+            // 
+            this.rolTableAdapter.ClearBeforeFill = true;
             // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 406);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ComboBoxRol);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel_Superior);
             this.Controls.Add(this.dataGridView1);
@@ -196,8 +223,8 @@ namespace Prototipo
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextBoxClave);
+            this.Controls.Add(this.TextBoxNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Estudiantes);
@@ -208,6 +235,8 @@ namespace Prototipo
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel_Superior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,8 +247,8 @@ namespace Prototipo
         private System.Windows.Forms.Label Estudiantes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TextBoxNombre;
+        private System.Windows.Forms.TextBox TextBoxClave;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -228,6 +257,9 @@ namespace Prototipo
         private System.Windows.Forms.Panel panel_Superior;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ComboBoxRol;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource rolBindingSource;
+        private DataSet1TableAdapters.RolTableAdapter rolTableAdapter;
     }
 }
