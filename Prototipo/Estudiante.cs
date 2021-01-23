@@ -37,6 +37,13 @@ namespace Prototipo
             this.carreraTableAdapter.Fill(this.dataSet1.Carrera);
 
         }
+        private void limpiar()
+        {
+         
+            TextBoxNombre.Clear();
+
+            ComboBoxCarrera.SelectedIndex = 0;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -75,7 +82,9 @@ namespace Prototipo
         }
         public void CargarDatos(DataGridViewCellEventArgs e)
         {
-            try
+            if (TextBoxNombre.Text != "")
+            {
+                try
             {
                 Id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
                 TextBoxNombre.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -86,11 +95,18 @@ namespace Prototipo
 
                 MessageBox.Show(EX.Message);
             }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un registro");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            if (TextBoxNombre.Text != "")
+            {
+                try
             {
                 DB.UpdateQuery(TextBoxNombre.Text, Convert.ToInt32(ComboBoxCarrera.SelectedValue), Id);
                 MessageBox.Show("Editado con exito");
@@ -99,6 +115,11 @@ namespace Prototipo
             {
 
                 MessageBox.Show(EX.Message);
+            }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un registro");
             }
 
         }

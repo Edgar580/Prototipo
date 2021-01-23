@@ -37,7 +37,13 @@ namespace Prototipo
             this.asignaturaTableAdapter.Fill(this.dataSet1.Asignatura);
 
         }
-
+        private void limpiar()
+        {
+            TextBoxClave.Clear();
+            TextBoxNombre.Clear();
+            TextBoxCreditos.Clear();
+            ComboBoxPrerrequisitos.SelectedIndex = 0;
+        }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -52,41 +58,56 @@ namespace Prototipo
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
-            try
+            if (TextBoxClave.Text == "")
             {
-                if (Convert.ToString(DB.ValidarDuplicados(TextBoxClave.Text)) != null)
+                MessageBox.Show("Debe llenar los campos");
+            }
+            else
+            {
+                try
                 {
-                    MessageBox.Show("Esta asignatura ya existe");
-                }
-                else
-                {
-                    if (checkBox1.Checked)
+                    if (Convert.ToString(DB.ValidarDuplicados(TextBoxClave.Text)) == null)
                     {
-                        DB.InsertQuery(TextBoxClave.Text, TextBoxNombre.Text, Convert.ToInt32(TextBoxCreditos.Text), ComboBoxPrerrequisitos.Text);
+                        MessageBox.Show("Esta asignatura ya existe");
                     }
                     else
                     {
-                        DB.InsertQuery(TextBoxClave.Text, TextBoxNombre.Text, Convert.ToInt32(TextBoxCreditos.Text), "No tiene");
+
+                        if (checkBox1.Checked)
+                        {
+                            DB.InsertQuery(TextBoxClave.Text, TextBoxNombre.Text, Convert.ToInt32(TextBoxCreditos.Text), ComboBoxPrerrequisitos.Text);
+                        }
+                        else
+                        {
+                            DB.InsertQuery(TextBoxClave.Text, TextBoxNombre.Text, Convert.ToInt32(TextBoxCreditos.Text), "No tiene");
+                        }
+                        limpiar();
+                        MessageBox.Show("Agregado con exito");
+
                     }
 
-                    MessageBox.Show("Agregado con exito");
-
                 }
-               
-            }
-            catch (Exception EX)
-            {
+                catch (Exception EX)
+                {
 
-                MessageBox.Show(EX.Message);
+                    MessageBox.Show(EX.Message);
+                }
             }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
-                if (checkBox1.Checked)
+                if (TextBoxClave.Text == "")
+                {
+                    MessageBox.Show("Debe seleccionar un registro");
+                }
+                else
+                {
+              
+                    if (checkBox1.Checked)
                 {
                     DB.UpdateQuery(TextBoxClave.Text, TextBoxNombre.Text, Convert.ToInt32(TextBoxCreditos.Text), ComboBoxPrerrequisitos.Text,Id);
                 }
@@ -94,26 +115,37 @@ namespace Prototipo
                 {
                     DB.UpdateQuery(TextBoxClave.Text, TextBoxNombre.Text, Convert.ToInt32(TextBoxCreditos.Text), "No tiene",Id);
                 }
-                MessageBox.Show("editado con exito");
+                    limpiar();
+                    MessageBox.Show("editado con exito");
+                }
             }
             catch (Exception EX)
             {
 
                 MessageBox.Show(EX.Message);
             }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
+            if (TextBoxClave.Text == "")
             {
-                DB.DeleteQuery(Id);
-                MessageBox.Show("Eliminado con exito");
+                MessageBox.Show("Debe seleccionar un registro");
             }
-            catch (Exception EX)
+            else
             {
+                try
+                {
+                    DB.DeleteQuery(Id);
+                    limpiar();
+                    MessageBox.Show("Eliminado con exito");
+                }
+                catch (Exception EX)
+                {
 
-                MessageBox.Show(EX.Message);
+                    MessageBox.Show(EX.Message);
+                }
             }
         }
         public void CargarDatos(DataGridViewCellEventArgs e)

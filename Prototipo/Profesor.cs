@@ -60,6 +60,12 @@ namespace Prototipo
                 MessageBox.Show(EX.Message);
             }
         }
+        private void limpiar()
+        {
+    
+            TextBoxNombre.Clear();
+         
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (DB.ValidarDuplicados(TextBoxNombre.Text) != null)
@@ -71,6 +77,7 @@ namespace Prototipo
                 try
                 {
                     DB.InsertQuery(TextBoxNombre.Text);
+                    limpiar();
                     MessageBox.Show("Agregado con exito");
                 }
                 catch (Exception EX)
@@ -88,29 +95,45 @@ namespace Prototipo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
+            if (TextBoxNombre.Text != "")
+            {
+                try
             {
                 DB.UpdateQuery(TextBoxNombre.Text,Id);
-                MessageBox.Show("Editado con exito");
+                    limpiar();
+                    MessageBox.Show("Editado con exito");
             }
             catch (Exception EX)
             {
 
                 MessageBox.Show(EX.Message);
+            }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un registro");
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            if (TextBoxNombre.Text != "")
+            {
+                try
             {
                 DB.DeleteQuery(Id);
-                MessageBox.Show("Eliminado con exito");
+                    limpiar();
+                    MessageBox.Show("Eliminado con exito");
             }
             catch (Exception EX)
             {
 
                 MessageBox.Show(EX.Message);
+            }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un registro");
             }
         }
 

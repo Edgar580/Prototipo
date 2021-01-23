@@ -50,7 +50,7 @@ namespace Prototipo
         {
             try
             {
-                DB.InsertQuery(Convert.ToInt32(ComboBoxAsignatura.SelectedValue), 1, Convert.ToInt32(ComboBoxEstudiante.SelectedValue), Convert.ToDouble(TextBoxCalificacion.Text));
+                DB.InsertQuery(Convert.ToInt32(ComboBoxAsignatura.SelectedValue), Convert.ToInt32(ComboBoxProfesor.SelectedValue), Convert.ToInt32(ComboBoxEstudiante.SelectedValue), Convert.ToDouble(TextBoxCalificacion.Text));
                 MessageBox.Show("Agregado con exito");
                 TextBoxCalificacion.Clear();
                 ComboBoxAsignatura.SelectedIndex = 0;

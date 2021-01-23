@@ -45,7 +45,7 @@ namespace Prototipo
             this.asignaturaTableAdapter = new Prototipo.DataSet1TableAdapters.AsignaturaTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ComboBoxProfesor = new System.Windows.Forms.ComboBox();
             this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.profesorTableAdapter = new Prototipo.DataSet1TableAdapters.ProfesorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).BeginInit();
@@ -182,17 +182,17 @@ namespace Prototipo
             this.label1.TabIndex = 26;
             this.label1.Text = "Profesor";
             // 
-            // comboBox1
+            // ComboBoxProfesor
             // 
-            this.comboBox1.DataSource = this.profesorBindingSource;
-            this.comboBox1.DisplayMember = "Nombre";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(295, 90);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 25;
-            this.comboBox1.ValueMember = "Id";
+            this.ComboBoxProfesor.DataSource = this.profesorBindingSource;
+            this.ComboBoxProfesor.DisplayMember = "Nombre";
+            this.ComboBoxProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxProfesor.FormattingEnabled = true;
+            this.ComboBoxProfesor.Location = new System.Drawing.Point(295, 90);
+            this.ComboBoxProfesor.Name = "ComboBoxProfesor";
+            this.ComboBoxProfesor.Size = new System.Drawing.Size(121, 21);
+            this.ComboBoxProfesor.TabIndex = 25;
+            this.ComboBoxProfesor.ValueMember = "Id";
             // 
             // profesorBindingSource
             // 
@@ -209,7 +209,7 @@ namespace Prototipo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 425);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ComboBoxProfesor);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TextBoxCalificacion);
@@ -250,7 +250,7 @@ namespace Prototipo
         private DataSet1TableAdapters.AsignaturaTableAdapter asignaturaTableAdapter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ComboBoxProfesor;
         private System.Windows.Forms.BindingSource profesorBindingSource;
         private DataSet1TableAdapters.ProfesorTableAdapter profesorTableAdapter;
     }

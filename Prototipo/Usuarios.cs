@@ -38,6 +38,13 @@ namespace Prototipo
             this.rolTableAdapter.Fill(this.dataSet1.Rol);
 
         }
+        private void limpiar()
+        {
+            TextBoxClave.Clear();
+            TextBoxNombre.Clear();
+          
+            ComboBoxRol.SelectedIndex = 0;
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -58,6 +65,7 @@ namespace Prototipo
                     {
 
                         DB.InsertQuery(TextBoxNombre.Text, TextBoxClave.Text, Convert.ToInt32(ComboBoxRol.SelectedValue));
+                        limpiar();
                         MessageBox.Show("Creado con exito");
                     }
                     catch (Exception EX)
@@ -96,6 +104,7 @@ namespace Prototipo
             try
             {
                 DB.UpdateQuery(TextBoxNombre.Text, TextBoxClave.Text, Convert.ToInt32(ComboBoxRol.SelectedValue),Id);
+                limpiar();
                 MessageBox.Show("Modificar con exito");
             }
             catch (Exception EX)
@@ -110,6 +119,7 @@ namespace Prototipo
             try
             {
                 DB.DeleteQuery(Id);
+                limpiar();
                 MessageBox.Show("Eliminado con exito");
             }
             catch (Exception EX)
@@ -122,6 +132,11 @@ namespace Prototipo
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             CargarDatos(e);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = DB.GetData();
         }
     }
 }
