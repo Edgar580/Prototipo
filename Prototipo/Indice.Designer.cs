@@ -139,12 +139,12 @@ namespace Prototipo
             this.radioButton2.AutoSize = true;
             this.radioButton2.FlatAppearance.BorderSize = 0;
             this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.Location = new System.Drawing.Point(307, 93);
+            this.radioButton2.Location = new System.Drawing.Point(307, 94);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(77, 23);
+            this.radioButton2.Size = new System.Drawing.Size(57, 23);
             this.radioButton2.TabIndex = 19;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Cum Lauden";
+            this.radioButton2.Text = "No tiene";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton3
